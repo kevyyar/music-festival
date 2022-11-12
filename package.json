@@ -1,0 +1,18 @@
+{
+  "name": "music-festival-scss",
+  "version": "1.0.0",
+  "description": "music festival landing page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:build/css --watch",
+    "dev": "gulp dev"
+  },
+  "author": "Kevin Barreto",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.1"
+  }
+}
