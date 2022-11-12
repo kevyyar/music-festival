@@ -306,3 +306,100 @@ template {
 [hidden] {
   display: none;
 }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 2rem;
+  color: #000;
+}
+
+.container {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h4, h4, h5 {
+  margin: 0 0 5rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+.header {
+  padding: 2rem;
+  background-color: #52796f;
+}
+.header h4 {
+  color: #fff;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header h4 {
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header__links {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header__links {
+    display: flex;
+    gap: 2rem;
+  }
+}
+.header__links--link {
+  display: block;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.header__links--link:hover {
+  color: #FCA311;
+}
+@media (min-width: 768px) {
+  .header__links--link {
+    margin-bottom: 0;
+  }
+}

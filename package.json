@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass src/scss:build/css --watch",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "serve": "lite-server"
   },
   "author": "Kevin Barreto",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
+    "lite-server": "^2.6.1",
     "sass": "^1.56.1"
   }
 }

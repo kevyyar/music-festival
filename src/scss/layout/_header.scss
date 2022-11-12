@@ -1,0 +1,39 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  padding: 2rem;
+  background-color: v.$green;
+  h4 {
+    color: v.$white;
+    text-align: center;
+    @include m.tablet {
+      margin: 0;
+    }
+  }
+  &__container {
+    @include m.tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__links {
+    text-align: center;
+    @include m.tablet {
+      display: flex;
+      gap: 2rem;
+    }
+    &--link {
+      display: block;
+      margin-bottom: 1rem;
+      color: v.$white;
+      &:hover {
+        color: v.$yellow;
+      }
+      @include m.tablet {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
