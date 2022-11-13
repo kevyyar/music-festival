@@ -396,10 +396,53 @@ h4 {
   color: #fff;
 }
 .header__links--link:hover {
-  color: #FCA311;
+  color: #fca311;
 }
 @media (min-width: 768px) {
   .header__links--link {
     margin-bottom: 0;
   }
+}
+
+.video {
+  position: relative;
+  max-height: 70rem;
+  overflow: hidden;
+}
+.video__overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(231, 0, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(270deg, rgba(231, 0, 255, 0.6418768191) 0%, rgba(255, 0, 134, 0.5354342421) 100%);
+}
+.video__container h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .video__container h2 {
+    font-size: 7rem;
+  }
+}
+.video__container p {
+  color: #fff;
+  background-color: #e2856e;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .video__container p {
+    font-size: 2.4rem;
+  }
+}
+.video video {
+  display: block;
+  width: 100%;
 }
