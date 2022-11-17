@@ -4,7 +4,10 @@ const { src, dest, watch, parallel } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
 // Images
-const webp = require("gulp-webp")
+const webp = require("gulp-webp");
+const imgMin = require("gulp-imagemin");
+const cache = require("gulp-cache");
+const avif = require("gulp-avif");
 
 function css(done) {
   src("src/scss/**/*.scss")
@@ -14,14 +17,30 @@ function css(done) {
   done();
 }
 
-function optimizeImgs(done) {
+function minimizeImgs(done) {
+  const options = {
+    optimizationLevel: 3,
+  };
+  src("src/img/**/*.{jpg,png}")
+    .pipe(cache(imgMin(options)))
+    .pipe(dest("build/img"));
+  done();
+}
+
+function webpImgs(done) {
   const options = {
     quality: 50,
-  }
-  src("src/img/**/*.{jpg,png}")
-    .pipe(webp(options))
-    .pipe(dest("build/img"));
-  done()
+  };
+  src("src/img/**/*.{jpg,png}").pipe(webp(options)).pipe(dest("build/img"));
+  done();
+}
+
+function avifImgs(done) {
+  const options = {
+    quality: 50,
+  };
+  src("src/img/**/*.{jpg,png}").pipe(avif(options)).pipe(dest("build/img"));
+  done();
 }
 
 function dev(done) {
@@ -30,5 +49,7 @@ function dev(done) {
 }
 
 exports.css = css;
-exports.optimizeImgs = optimizeImgs;
-exports.dev = parallel(optimizeImgs, dev);
+exports.minimizeImgs = minimizeImgs;
+exports.webpImgs = webpImgs;
+exports.avifImgs = avifImgs;
+exports.dev = parallel(minimizeImgs, webpImgs, avifImgs, dev);
