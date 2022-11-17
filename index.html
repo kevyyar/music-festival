@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock & EDM Festival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rock & EDM Festival</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="build/css/app.css" />
-</head>
-
-<body>
-  <header class="header">
-    <div class="header__container container">
-      <h4>Hip Hop Festival 2023</h4>
-      <nav class="header__links">
-        <a class="header__links--link" href="#">Line Up</a>
-        <a class="header__links--link" href="#">Gallery</a>
-        <a class="header__links--link" href="#">Tickets</a>
-      </nav>
-    </div>
-  </header>
-  <div class="video">
-    <div class="video__overlay">
-      <div class="container video__container">
-        <h2>Hip Hop Festival</h2>
-        <p>May 29th, 2023 - Seattle, Washington</p>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <h4>Hip Hop Festival 2023</h4>
+        <nav class="header__links">
+          <a class="header__links--link" href="#">Line Up</a>
+          <a class="header__links--link" href="#">Gallery</a>
+          <a class="header__links--link" href="#">Tickets</a>
+        </nav>
       </div>
+    </header>
+    <div class="video">
+      <div class="video__overlay">
+        <div class="container video__container">
+          <h2>Hip Hop Festival</h2>
+          <p>May 29th, 2023 - Seattle, Washington</p>
+        </div>
+      </div>
+      <video autoplay muted loop>
+        <source src="./video/concierto.mp4" type="video/mp4" />
+        <source src="./video/concierto.ogg" type="video/ogg" />
+        <source src="./video/concierto.webm" type="video/webm" />
+      </video>
     </div>
-    <video autoplay muted loop>
-      <source src="./video/concierto.mp4" type="video/mp4" />
-      <source src="./video/concierto.ogg" type="video/ogg" />
-      <source src="./video/concierto.webm" type="video/webm" />
-    </video>
-  </div>
 
-  <section class="container about-festival">
-    <div class="about-festival__image">
-      <img src="build/img/imagen_vocalista.webp" alt="Vocalist">
-    </div>
-    <div class="about-festival__content">
-      <h2>Hip Hop Festival</h2>
-      <p class="about-festival__content--date">May 29th, 2023 - Seattle, Washington</p>
-      <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem
-        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
-        ullamco ut ea consectetur et est culpa et culpa duis.</p>
-    </div>
-  </section>
-</body>
-
+    <section class="container about-festival">
+      <div class="about-festival__image">
+        <picture>
+          <source srcset="build/img/imagen_vocalista.avif" type="image/avif" />
+          <source srcset="build/img/imagen_vocalista.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="build/img/imagen_vocalista.jpg"
+            width="200"
+            height="300"
+            alt="Vocalist"
+          />
+        </picture>
+      </div>
+      <div class="about-festival__content">
+        <h2>Hip Hop Festival</h2>
+        <p class="about-festival__content--date">
+          May 29th, 2023 - Seattle, Washington
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+          enim labore culpa sint ad nisi Lorem eiusmod. Aliqua reprehenderit
+          commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint
+          cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+        </p>
+      </div>
+    </section>
+  </body>
 </html>

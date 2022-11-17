@@ -312,7 +312,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -341,7 +343,11 @@ ul {
   list-style: none;
 }
 
-h1, h2, h4, h4, h5 {
+h1,
+h2,
+h4,
+h4,
+h5 {
   margin: 0 0 5rem 0;
 }
 
@@ -362,6 +368,8 @@ h4 {
 }
 
 img {
+  width: 100%;
+  height: auto;
   max-width: 100%;
   display: block;
 }
