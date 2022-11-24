@@ -14,6 +14,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem;
+    @include m.desktop {
+      padding: 0;
+    }
     h2 {
       text-align: center;
       margin-bottom: 2rem;
@@ -29,5 +33,21 @@
         text-align: left;
       }
     }
+    &--description {
+      color: v.$black;
+      text-align: left;
+      font-size: 1.8rem;
+      @include m.desktop {
+        font-size: 2rem;
+      }
+    }
   }
+}
+
+.bg-yellow {
+  background-color: v.$yellow;
+}
+
+.bg-green {
+  background-color: v.$green;
 }

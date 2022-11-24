@@ -1,0 +1,35 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.lineup {
+  background-color: v.$pink;
+  padding: 5rem 0;
+  &__day {
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+  }
+}
+
+.stage-container {
+  margin-bottom: 10rem;
+  @include m.tablet {
+    @include m.grid(2, 5rem);
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__classics,
+  &__modern {
+    padding: 2rem;
+    margin-bottom: 4rem;
+    @include m.tablet {
+      margin-bottom: 0;
+    }
+  }
+}
+
+h3,
+p {
+  text-align: center;
+  color: v.$white;
+}

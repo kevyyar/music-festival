@@ -478,6 +478,12 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2rem;
+}
+@media (min-width: 992px) {
+  .about-festival__content {
+    padding: 0;
+  }
 }
 .about-festival__content h2 {
   text-align: center;
@@ -497,4 +503,60 @@ img {
   .about-festival__content--date {
     text-align: left;
   }
+}
+.about-festival__content--description {
+  color: #000;
+  text-align: left;
+  font-size: 1.8rem;
+}
+@media (min-width: 992px) {
+  .about-festival__content--description {
+    font-size: 2rem;
+  }
+}
+
+.bg-yellow {
+  background-color: #fca311;
+}
+
+.bg-green {
+  background-color: #52796f;
+}
+
+.lineup {
+  background-color: #e2856e;
+  padding: 5rem 0;
+}
+.lineup__day {
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.stage-container {
+  margin-bottom: 10rem;
+}
+@media (min-width: 768px) {
+  .stage-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+.stage-container:last-child {
+  margin-bottom: 0;
+}
+.stage-container__classics, .stage-container__modern {
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .stage-container__classics, .stage-container__modern {
+    margin-bottom: 0;
+  }
+}
+
+h3,
+p {
+  text-align: center;
+  color: #fff;
 }
